@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <section class="container">
+        <form>
+            <i class="fas fa-search"></i>
+            <input type="text" name="" id="search-item" placeholder="search products" onkeyup="search()"/>
+        </form>
+
+        <div class="product-list" id="product-list">
+
+ 
+         <div class="product">
+            <img src="product/t1.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>U TURN</h2>
+                    <h3>$25</h3>            
+             </div>
+         </div>
+
+         
+         <div class="product">
+            <img src="product/s2.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>NIKE</h2>
+                    <h3>$156</h3>            
+             </div>
+         </div>
+        
+
+         <div class="product">
+            <img src="product/t2.jpeg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>CHECLOTH</h2>
+                    <h3>$28</h3>            
+             </div>
+         </div>
+
+
+         <div class="product">
+            <img src="product/t3.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>SEVENTEEN</h2>
+                    <h3>$85</h3>            
+             </div>
+         </div>
+
+         <div class="product">
+            <img src="product/w1.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>WATCH</h2>
+                    <h3>$22</h3>            
+             </div>
+         </div>
+         
+         <div class="product">
+            <img src="product/t3.png" alt="logo"/>
+                  <div class="p-details">
+                   <h2>WHITE</h2>
+                    <h3>$45</h3>            
+             </div>
+         </div>
+
+         <div class="product">
+            <img src="product/t4.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>ICOME</h2>
+                    <h3>$56</h3>            
+             </div>
+         </div>
+
+         <div class="product">
+            <img src="product/t5.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>ICOME</h2>
+                    <h3>$30</h3>            
+             </div>
+         </div>
+
+         <div class="product">
+            <img src="product/d1.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>Top</h2>
+                    <h3>$45</h3>            
+             </div>
+         </div>
+
+
+
+         <div class="product">
+            <img src="product/t6.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>FUBAR</h2>
+                    <h3>$28</h3>            
+             </div>
+         </div>
+
+         <div class="product">
+            <img src="product/w4.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>WATCH</h2>
+                    <h3>$35</h3>            
+             </div>
+         </div>
+
+
+         <div class="product">
+            <img src="product/t7.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>HIGHLANDER</h2>
+                    <h3>$58</h3>            
+             </div>
+         </div>
+
+         <div class="product">
+            <img src="product/t8.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>FINOTIC</h2>
+                    <h3>$22</h3>            
+             </div>
+         </div>
+
+
+
+         <div class="product">
+            <img src="product/w2.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>WATCH</h2>
+                    <h3>$31</h3>            
+             </div>
+         </div>
+
+
+      
+
+
+
+         <div class="product">
+            <img src="product/s1.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>PUMA</h2>
+                    <h3>$40</h3>            
+             </div>
+         </div>
+
+
+
+
+         <div class="product">
+            <img src="product/d2.jpg" alt="logo"/>
+                  <div class="p-details">
+                   <h2>DRESS</h2>
+                    <h3>$85</h3>            
+             </div>
+         </div>
+
+        </div>
+    </section>
+
+
+    <script>
+
+// function search(){
+
+//     const searchbox = document.getElementById("search-item").value.toUpperCase();
+//     const product = document.querySelectorAll(".product");
+//     const pname = document.getElementsByTagName("h2");
+
+    
+//     for(var i=0;i<pname.length;i++){ //16
+//         let match = product[i].getElementsByTagName('h2')[0];
+
+//         if(match){
+//             let textvalue = match.textContent || match.innerHTML
+
+//             if(textvalue.toUpperCase().indexOf(searchbox) >-1){
+//                 console.log(textvalue.toUpperCase().indexOf(searchbox)>-1);
+//                 product[i].style.display = "";
+
+//             }else{
+//                 product[i].style.display="none";
+//             }
+//         }
+//     }
+// }
+
+function search(){
+
+    const search_item = document.getElementById("search-item").value.toUpperCase();
+    const product = document.querySelectorAll(".product");
+    const tag = document.getElementsByTagName("h2");
+
+    for(var i=0;i<tag.length;i++){
+       let match = product[i].getElementsByTagName('h2')[0];
+       console.log(match);
+
+       if(match){
+     let equal = match.textContent || match.innerHTML;
+     
+    if(equal.toUpperCase().indexOf(search_item)>-1){
+        product[i].style.display="";
+      }else{
+       product[i].style.display = "none";
+       }
+    }
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
